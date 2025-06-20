@@ -1,37 +1,32 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Palette, Sparkles, Heart, Star } from "lucide-react";
 
 const services = [
   {
-    icon: Palette,
+    image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     title: "Professional Makeup",
-    description: "Flawless makeup for weddings, events, and special occasions. Using premium products for long-lasting results.",
-    price: "From $80"
+    description: "Flawless makeup for weddings, events, and special occasions. Using premium products for long-lasting results that enhance your natural beauty."
   },
   {
-    icon: Sparkles,
-    title: "Skincare Treatments",
-    description: "Rejuvenating facials, chemical peels, and personalized skincare routines for glowing, healthy skin.",
-    price: "From $120"
+    image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    title: "Skincare Treatments", 
+    description: "Rejuvenating facials, chemical peels, and personalized skincare routines for glowing, healthy skin that radiates from within."
   },
   {
-    icon: Heart,
+    image: "https://images.unsplash.com/photo-1519415943484-9fa1873496d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     title: "Bridal Packages",
-    description: "Complete bridal beauty services including trial sessions, wedding day makeup, and skincare preparation.",
-    price: "From $300"
+    description: "Complete bridal beauty services including trial sessions, wedding day makeup, and skincare preparation for your special day."
   },
   {
-    icon: Star,
+    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
     title: "Beauty Consultations",
-    description: "Personalized beauty advice, color analysis, and product recommendations tailored to your unique features.",
-    price: "From $60"
+    description: "Personalized beauty advice, color analysis, and product recommendations tailored to your unique features and lifestyle."
   }
 ];
 
 export const Services = () => {
   return (
-    <section className="py-20 px-4 bg-white/50 backdrop-blur-sm">
+    <section id="services" className="py-20 px-4 bg-gradient-to-br from-rose-50/50 via-pink-50/50 to-purple-50/50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-rose-600 to-purple-600 bg-clip-text text-transparent mb-4">
@@ -46,17 +41,21 @@ export const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={service.title}
-              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:scale-105 animate-fade-in"
+              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:scale-105 animate-fade-in overflow-hidden"
               style={{ animationDelay: `${index * 150}ms` }}
             >
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
               <CardHeader className="text-center pb-4">
-                <div className="mx-auto w-16 h-16 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
                 <CardTitle className="text-xl font-bold text-gray-800 group-hover:text-rose-600 transition-colors">
                   {service.title}
                 </CardTitle>
-                <div className="text-2xl font-bold text-rose-500">{service.price}</div>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600 text-center leading-relaxed">

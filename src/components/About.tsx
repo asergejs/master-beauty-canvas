@@ -1,3 +1,4 @@
+
 import { Badge } from "@/components/ui/badge";
 import { Award, Users, Clock, CheckCircle, Sparkles } from "lucide-react";
 
@@ -10,7 +11,7 @@ const achievements = [
 
 export const About = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-purple-50/30 via-pink-50/30 to-rose-50/30">
+    <section id="about" className="py-20 px-4 bg-gradient-to-br from-purple-50/30 via-pink-50/30 to-rose-50/30">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -44,16 +45,12 @@ export const About = () => {
           </div>
           
           <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-rose-200 via-pink-200 to-purple-200 rounded-3xl p-8 shadow-2xl">
-              <div className="w-full h-full bg-gradient-to-br from-rose-100 to-pink-100 rounded-2xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
-                    <Sparkles className="w-16 h-16 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-2">Elena Martinez</h3>
-                  <p className="text-rose-600 font-medium">Certified Beauty Master</p>
-                </div>
-              </div>
+            <div className="aspect-square bg-gradient-to-br from-rose-200 via-pink-200 to-purple-200 rounded-3xl p-8 shadow-2xl overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1494790108755-2616c0763c1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                alt="Elena Martinez - Beauty Master"
+                className="w-full h-full object-cover rounded-2xl shadow-lg"
+              />
             </div>
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full blur-xl opacity-60 animate-pulse"></div>
             <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-rose-400 to-pink-400 rounded-full blur-xl opacity-60 animate-pulse delay-1000"></div>
