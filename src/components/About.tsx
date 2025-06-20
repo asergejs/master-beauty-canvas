@@ -1,6 +1,5 @@
-
 import { Badge } from "@/components/ui/badge";
-import { Award, Users, Clock, CheckCircle } from "lucide-react";
+import { Award, Users, Clock, CheckCircle, Sparkles } from "lucide-react";
 
 const achievements = [
   { icon: Award, text: "5+ Years Experience" },
