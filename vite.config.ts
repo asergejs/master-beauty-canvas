@@ -20,5 +20,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: process.env.NODE_ENV === 'production' ? '/master-beauty-canvas/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/' : '/',
 }));
